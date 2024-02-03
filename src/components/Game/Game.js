@@ -4,7 +4,7 @@ import GameGrid from "../GameGrid";
 import NumberOfMistakesDisplay from "../NumberOfMistakesDisplay";
 import GameLostModal from "../modals/GameLostModal";
 import GameWonModal from "../modals/GameWonModal";
-
+import {selectedOption1, selectedOption2, enteredText} from "../Create"
 import { Separator } from "../ui/separator";
 import ConfettiExplosion from "react-confetti-explosion";
 
@@ -62,10 +62,8 @@ function Game() {
 
   return (
     <>
-      <h2 className="font-space-mono">
-        Create {numCategories} groups of {categorySize}
-      </h2>
-
+      <strong><h2 className="font-space-mono"> Create {numCategories} groups of {categorySize} </h2></strong>
+      <h2 className="font-space-mono"> Options selected {selectedOption1} {selectedOption2} {enteredText}</h2>
       <div className={`game-wrapper`}>
         {isGameOver && isGameWon ? (
           <GameWonModal
