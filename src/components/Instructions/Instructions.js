@@ -25,10 +25,9 @@ function Instructions(){
         Welcome to WordQuest! Immerse yourself in language exploration. Group words into themed sets, each unlocking new linguistic adventures. Sharpen your skills, challenge friends, and embark on a journey of learning and fun!
         </h3>
         <button className="openModalBtn"
-        onClick={routeChange}
-      >
+        onClick={routeChange}>
         Get Started
-      </button>
+        </button>
       </div>
     );
 }
