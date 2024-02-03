@@ -1,24 +1,36 @@
 import React, { useState } from "react";
-import { Button } from "../ui/button";
-import Modal from "../Modal";
+import { useNavigate } from "react-router-dom";
 
-function Home(){
-    const [modalOpen, setModalOpen] = useState(false);
-    return (
-        <div>
-          <h5 className="font-space-mono"> Name Here </h5>
-          <h4 className="font-space-mono"> How to play the game? </h4>
-      <button className="openModalBtn"
-        onClick={() => {
-          setModalOpen(true);
-        }}
+function Instructions(){
+    const containerStyle = {
+      maxWidth: '900px', // Set the maximum width as per your requirement
+      margin: '0 auto',  // Center the container horizontally
+      padding: '20px',   // Add some padding for better readability
+    };
+  
+    const textStyle = {
+      width: '100%', // Allow the text to take the full width of the container
+      // Additional styling as needed
+    };
+
+    let navigate = useNavigate(); 
+    const routeChange = () =>{ 
+        let path = "../Create"; 
+        navigate(path);
+    }
+  return (
+      <div style={containerStyle}>
+        <strong><h2 className="font-space-mono"> How to play Game_Name </h2></strong>
+        <h3 style={textStyle} className="font-space-mono">
+        Welcome to WordQuest! Immerse yourself in language exploration. Group words into themed sets, each unlocking new linguistic adventures. Sharpen your skills, challenge friends, and embark on a journey of learning and fun!
+        </h3>
+        <button className="openModalBtn"
+        onClick={routeChange}
       >
         Get Started
       </button>
-
-      {modalOpen && <Modal setOpenModal={setModalOpen} />}
-        </div>
-      );
+      </div>
+    );
 }
 
-export default Home;
+export default Instructions;

@@ -8,6 +8,7 @@ import { Toaster } from "../ui/toaster";
 import PuzzleDataProvider from "../../providers/PuzzleDataProvider";
 import GameStatusProvider from "../../providers/GameStatusProvider";
 import  "../../styles.css"
+import Instructions from "../Instructions";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Header />
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/instructions" element={<Instructions/>} />
               <Route path="/create" element={<Create/>} />
               <Route path="/game" element={<Game/>} />
             </Routes> 

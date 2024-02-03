@@ -21,8 +21,6 @@ function Home(){
       >
         Get Started
       </button>
-
-      {/* {modalOpen && <Modal setOpenModal={setModalOpen} />} */}
         </div>
       );
 }
