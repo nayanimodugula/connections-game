@@ -62,9 +62,9 @@ function Game() {
 
   return (
     <>
-      <h3 className="text-xl text-center mt-4">
+      <h2 className="font-space-mono">
         Create {numCategories} groups of {categorySize}
-      </h3>
+      </h2>
 
       <div className={`game-wrapper`}>
         {isGameOver && isGameWon ? (

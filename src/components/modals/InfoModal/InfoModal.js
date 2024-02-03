@@ -13,40 +13,14 @@ import BaseModal from "../BaseModal";
 function InfoModal() {
   return (
     <BaseModal
-      title="How To Play <Insert Website Name>?"
+      title={<h6 className="font-space-mono"> How To Play Groupology? </h6>}
       trigger={<Info className="mr-4" />}
       initiallyOpen={false}
-      actionButtonText="Got It!"
+      actionButtonText={<p className="font-space-mono"> Got it! </p>}
     >
-      <Tabs defaultValue="how-to-play">
-        {/* <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger value="how-to-play">How To Play</TabsTrigger>
-        </TabsList> */}
-        <TabsContent value="how-to-play">
-          {" "}
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="item-1">
-              <AccordionTrigger>What's The Goal?</AccordionTrigger>
-              <AccordionContent>
-                Find groups of items or names that share something in common.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger>How Do I Play?</AccordionTrigger>
-              <AccordionContent>
-                Select the items and tap 'Submit' to check if your guess matches
-                one of the answer categories.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger>How Many Tries Do I Get?</AccordionTrigger>
-              <AccordionContent>
-                {`You can make ${MAX_MISTAKES} mistakes before the game ends.`}
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </TabsContent>
-      </Tabs>
+      <p className="font-space-mono" >
+        Welcome to WordQuest! Immerse yourself in language exploration. Group words into themed sets, each unlocking new linguistic adventures. Sharpen your skills, challenge friends, and embark on a journey of learning and fun!
+        </p>
     </BaseModal>
   );
 }
