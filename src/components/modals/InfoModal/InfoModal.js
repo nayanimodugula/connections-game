@@ -19,7 +19,7 @@ function InfoModal() {
       actionButtonText={<p className="font-space-mono"> Got it! </p>}
     >
       <p className="font-space-mono" >
-        Welcome to WordQuest! Immerse yourself in language exploration. Group words into themed sets, each unlocking new linguistic adventures. Sharpen your skills, challenge friends, and embark on a journey of learning and fun!
+        Welcome to Groupology! Immerse yourself in language exploration. Group words into themed sets, each unlocking new linguistic adventures. Sharpen your skills, challenge friends, and embark on a journey of learning and fun!
         </p>
     </BaseModal>
   );
