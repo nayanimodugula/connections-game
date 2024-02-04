@@ -2,7 +2,7 @@ export const CONNECTION_GAMES = [
   [
     {
       category: "Fruits",
-      words: ["Apple", "Bannana", "Orange", "Peach"],
+      words: ["Apple", "Banana", "Orange", "Peach"],
       // words: ["Apple", "Bannana", "Orange"],
       difficulty: 1,
       imageSrc: ["सेब","केला", "नारंगी", "आड़ू"],
