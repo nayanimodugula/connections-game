@@ -19,16 +19,18 @@ function Instructions(){
         navigate(path);
     }
   return (
-      <div style={containerStyle}>
-        <strong><h2 className="font-space-mono"> How to play Game_Name </h2></strong>
+    <div className="page-container">
+      <div style={containerStyle} >
+        <strong><h2 className="font-space-mono"> How to play Groupology </h2></strong>
         <h3 style={textStyle} className="font-space-mono">
-        Welcome to WordQuest! Immerse yourself in language exploration. Group words into themed sets, each unlocking new linguistic adventures. Sharpen your skills, challenge friends, and embark on a journey of learning and fun!
+        Welcome to Groupology! Immerse yourself in language exploration. Group words into themed sets, each unlocking new linguistic adventures. Sharpen your skills, challenge friends, and embark on a journey of learning and fun!
         </h3>
         <button className="openModalBtn"
         onClick={routeChange}>
         Get Started
         </button>
       </div>
+    </div>
     );
 }
 

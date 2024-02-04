@@ -13,9 +13,9 @@ function Home(){
 
     // const [modalOpen, setModalOpen] = useState(false);
     return (
-        <div>
-          <h5 className="font-space-mono"> Name Here </h5>
-          <h4 className="font-space-mono"> Learn Language by grouping words! </h4>
+        <div className="page-container">
+          <h5 className="font-space-mono"> Groupology </h5>
+          <h4 className="font-space-mono"> Unlock languages with games </h4>
       <button className="openModalBtn"
         onClick={routeChange}
       >

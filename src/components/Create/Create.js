@@ -29,6 +29,7 @@ const Create = () => {
   };
 
   return (
+    <div className="page-container">
     <div style = {containerStyle}>
       <strong><h2 className="font-space-mono"> Let's get Ready! </h2></strong>
       <div className="text-with-dropdown">
@@ -65,6 +66,7 @@ const Create = () => {
         Play
       </button>
     </div>
+  </div>
   );
 };
 

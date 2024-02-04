@@ -1,6 +1,7 @@
 import React from "react";
 
 import WordButton from "../WordButton";
+import TranslatedButton from "../TranslatedButton";
 
 import * as styles from "./GameGrid.module.css";
 
@@ -21,12 +22,22 @@ function WordRow({ words }) {
   );
 }
 
+function TranslatedRow({ words }) {
+  return (
+    <div className={`grid grid-cols-4 gap-4`}>
+      {words.map((word) => (
+        <TranslatedButton key={word} word={word} fullCandidateSize={words.length} />
+      ))}
+    </div>
+  );
+}
+
 export function SolvedWordRow({ ...props }) {
   const DIFFICULTY_COLOR_MAP = {
-    1: "rgb(74 222 128)", // green
-    2: "rgb(251 191 36)", // amber
-    3: "rgb(129 140 248)", //indigo
-    4: "rgb(34 211 238)", //cyan
+    1: "rgb(241 197 252)", // pink
+    2: "rgb(131 201 176)", // green
+    3: "rgb(156 188 237)", //blue
+    4: "rgb(242 221 147)", //yellow
   };
 
   const color = `${DIFFICULTY_COLOR_MAP[props.difficulty]}`;
@@ -63,7 +74,7 @@ export function SolvedWordRow({ ...props }) {
             >
               {!hasBeenClicked && (
                 <Badge className="animate-pulse absolute top-0 right-0 mr-2 mt-2">
-                  View More
+                  +
                 </Badge>
               )}
               <p className="font-bold pt-2 pl-4">{props.category}</p>
@@ -71,9 +82,7 @@ export function SolvedWordRow({ ...props }) {
             </div>
           </PopoverTrigger>
           <PopoverContent>
-            <div>
-              <img src={props.imageSrc} />
-            </div>
+            <TranslatedRow words = {props.imageSrc}/>
           </PopoverContent>
         </Popover>
       )}
@@ -122,7 +131,7 @@ function GameGrid({ gameRows, shouldGridShake, setShouldGridShake }) {
       {/* Show correct answers here after the game is over if they lost */}
       {isGameOverAndLost && (
         <div className="grid gap-y-2 pb-2">
-          <p>The answer categories are below.</p>
+          <p className="font-space-mono">The answer categories are below.</p>
           {gameData.map((obj) => (
             <SolvedWordRow key={obj.category} {...obj} />
           ))}

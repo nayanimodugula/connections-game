@@ -61,9 +61,8 @@ function Game() {
   }, [isGameOver]);
 
   return (
-    <>
+    <div className="page2-container">
       <strong><h2 className="font-space-mono"> Create {numCategories} groups of {categorySize} </h2></strong>
-      <h2 className="font-space-mono"> Options selected {selectedOption1} {selectedOption2} {enteredText}</h2>
       <div className={`game-wrapper`}>
         {isGameOver && isGameWon ? (
           <GameWonModal
@@ -77,7 +76,7 @@ function Game() {
           />
         )}
         <GameGrid
-          gameRows={shuffledRows}
+          gameRows={shuffledRows}     
           shouldGridShake={gridShake}
           setShouldGridShake={setGridShake}
         />
@@ -105,7 +104,7 @@ function Game() {
           <ViewResultsModal />
         )}
       </div>
-    </>
+    </div>
   );
 }
 

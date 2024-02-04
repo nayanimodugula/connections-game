@@ -61,7 +61,7 @@ function WordButton({ word, fullCandidateSize }) {
       onClick={flipSelection}
     >
       <p
-        style={{ fontSize: getFontSize(word) }}
+        style={{ fontSize: getFontSize(word), fontFamily: "space-mono" }}
         className="font-space-mono uppercase sm:text-xs md:text-xs"
       >
         {word}
